@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+	background-image: url("Team2_all.jpg");
+<!--background-repeat: no-repeat;-->
+}
+	p.dotted {border-style: dotted;}
+	p.dashed {border-style: dashed;}
+	p.solid {border-style: solid;}
+	p.double {border-style: double;}
+	p.groove {border-style: groove;}
+	p.ridge {border-style: ridge;}
+	p.inset {border-style: inset;}
+	p.outset {border-style: outset;}
+	p.none {border-style: none;}
+	p.hidden {border-style: hidden;}
+	p.mix {border-style: dotted dashed solid double;}
+
+	div {
+    background-color: lightgrey;
+    width: 300px;
+    border: 25px solid green;
+    padding: 25px;
+    margin: 25px;
+}
+table {
+    border-collapse: collapse;
+}
+
+table, td, th {
+    border: 1px solid black;
+}
+
+#rcorners1 {
+    border-radius: 25px;
+    background: #73AD21;
+    padding: 20px; 
+    width: 200px;
+    height: 150px;    
+}
+
+</style>
+</head>
+<body>
+
+<h1>The background-color Property</h1>
+
+<p>The background color can be specified with a color name.</p>
+
+<p class="dotted">A dotted border.</p>
+<p class="dashed">A dashed border.</p>
+<p class="solid">A solid border.</p>
+<p class="double">A double border.</p>
+<p class="groove">A groove border.</p>
+<p class="ridge">A ridge border.</p>
+<p class="inset">An inset border.</p>
+<p class="outset">An outset border.</p>
+<p class="none">No border.</p>
+<p class="hidden">A hidden border.</p>
+<p class="mix">A mixed border.</p>
+
+<p>The CSS box model is essentially a box that wraps around every HTML element. It consists of: borders, padding, margins, and the actual content.</p>
+
+<div>This text is the actual content of the box. We have added a 25px padding, 25px margin and a 25px green border.</div>
+
+<h2>Let the borders collapse:</h2>
+
+<table>
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th>
+  </tr>
+  <tr>
+    <td>Peter</td>
+    <td>Griffin</td>
+  </tr>
+  <tr>
+    <td>Lois</td>
+    <td>Griffin</td>
+  </tr>
+</table>
+
+<p>Rounded corners for an element with a specified background color:</p>
+<p id="rcorners1">Rounded corners!</p>
+
+</body>
+</html>
