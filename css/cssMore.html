@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<style>
+div#head {
+    perspective: 200px;
+}
+div#sub {
+    width: 300px;
+    height: 100px;
+    background-color: pink;
+    border: 1px solid black;
+    transform: translate(250px,50px) rotateX(45deg);
+
+}
+
+div#trans1{
+    width: 100px;
+    height: 100px;
+    background: red;
+    transform: translate(150px,150px);
+    transition: width 2s, height 3s, background 2s, opacity 4s;
+}
+div#trans1:hover {
+    width: 200px;
+    height: 150px;
+    background: teal;
+    opacity: 20%;
+}
+
+div#animate{
+  width: 100px;
+  height: 100px;
+  position: relative;
+  background-color: red;
+  animation-name: Bruh;
+  animation-duration: 4s;
+  transform: translate(50px,50px);
+  animation-delay: 5s;
+  animation-iteration-count: infinite;
+}
+@keyframes Bruh {
+  0%   {background-color:red; left:0px; top:0px;}
+ 25%  {background-color:yellow; left:200px; top:0px; border-radius: 50px;}
+ 50%  {background-color:blue; left:200px; top:200px; border-radius: 25px;}
+ 75%  {background-color:green; left:0px; top:200px; border-radius: 50px;}
+ 100% {background-color:red; left:0px; top:0px;}
+}
+
+</style>
+<body>
+
+<div id= "head">
+  <div id="sub">
+    This div element is rotated counter-clockwise with 20 degrees.
+  </div>
+</div>
+
+<div id="trans1"></div>
+
+<div id="animate"></div>
+
+</body>
+</html>

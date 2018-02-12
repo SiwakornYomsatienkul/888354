@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<style>
+
+body{
+  text-align:center;
+}
+
+</style>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script>
+
+$(document).ready(function(){
+  $("#GenNum").click(function(){
+    //generate 2 random numbers between 1-100
+    FirstNum = Math.floor((Math.random() * 100) + 1);
+    SecondNum = Math.floor((Math.random() * 100) + 1);
+
+    //display Number(replace with id)
+    $("#FirstInt").html(FirstNum+' + ');
+    $("#SecondInt").html(SecondNum+' = ');
+
+    //send answer to check
+    $("#SendAns").click(function(){
+      var TempValue = $("#AnsMath").val();
+      var InnerRes = FirstNum + SecondNum;
+      if(TempValue == InnerRes){
+        $("#ResultText").html("<span style='color:Green'>That's correct.</span>");
+      }
+      else{
+        $("#ResultText").html("<span style='color:Red'>That's wrong, The answer is "+ InnerRes +".</span>");
+      }
+    });
+  });
+});
+
+</script>
+</head>
+<body>
+
+<h2>EX - Random Number for Answer</h2>
+
+<hr><br>
+
+<button id="GenNum">Random Number</button><br>
+
+<br>
+
+<span id ="FirstInt">0 +</span>
+<span id ="SecondInt">0 =</span>
+<input type="number" id="AnsMath" value="0">
+
+<br><br>
+
+<button id="SendAns">Send Answer</button>
+
+<br><br>
+
+Result : <span id="ResultText"></span>
+
+</body>
+</html>
