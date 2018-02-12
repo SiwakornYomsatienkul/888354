@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 <style>
@@ -55,3 +56,62 @@ Result for Search : <span id="Result"></span>
 
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html>
+<style>
+
+body{
+  text-align:center;
+}
+</style>
+<body>
+
+<script>
+  function SearchSensitive(){
+    var Full_text = document.getElementById("Message").value;
+    var Compare_text = document.getElementById("KeyWord").value;
+    var count = 0 ;
+
+    if (document.getElementById("Yes_Case").checked){
+        var str = new RegExp(Compare_text,"g");
+        var res = Full_text.match(str);
+        console.log(res.length);
+    }
+
+    else if (document.getElementById("No_Case").checked){
+      var str = new RegExp(Compare_text,"gi");
+      var res = Full_text.match(str);
+      console.log(res.length);
+    }
+    document.getElementById("Result").innerHTML = res.length;
+  }
+</script>
+
+<h2>EX2 - Search String Non Sensitive Case</h2>
+<hr>
+<p>Text Input :
+  <textarea id="Message"  name="Message" rows="4" cols="50"></textarea>
+</p>
+
+<form>
+  Sensitive Case :
+  <input type="radio" name="sencitive" id="Yes_Case" value="Yes" checked> Yes
+  <input type="radio" name="sencitive" id="No_Case" value="No"> No
+</form>
+<br>
+
+<form>
+  Search : <input type="text" name="KeyWord" id="KeyWord">
+</form>
+
+<br>
+
+<button onclick="SearchSensitive()">Search</button>
+
+<br><br>
+Result for Search : <span id="Result"></span>
+
+</body>
+</html>
+>>>>>>> 153e7c281ab4c6ea62138665946d4acd984f90a0
